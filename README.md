@@ -2,23 +2,12 @@
 
 Bazel build rules for OpenBLAS.
 
-Copy this into your Bazel `WORKSPACE` file:
+## About
 
-```python
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+Uses `rules_foreign_cc` to do a CMake configuration (default options), build, and install of OpenBLAS from source.  The user can then include `@openblas` in the `deps` argument in project BUILD files.  See the `examples` folder for a simple example.
 
-http_archive(
-    name = "openblas",
-    sha256 = "cba377eeb528aedf12ef1e3b46b35c40f7b7d384568fea0a19d18f3378b1ccb9",
-    strip_prefix = "rules-openblas-0.1.0",
-    url = "https://github.com/phpisciuneri/rules-openblas/archive/refs/tags/v0.1.0.tar.gz",
-)
+For usage see the instructions with the [latest release](https://github.com/phpisciuneri/rules-openblas/releases/latest).
 
-load("@openblas//openblas:deps.bzl", "rules_openblas_dependencies")
+## Future
 
-rules_openblas_dependencies()
-
-load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
-
-rules_foreign_cc_dependencies()
-```
+I'd like to expose options for the user to have more control over the cmake rule.  For now, you are limited to default options.  Furthermore, if the CMake configuration encounters any errors you are out of luck.
