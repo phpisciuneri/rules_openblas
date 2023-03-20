@@ -9,7 +9,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "openblas",
-    sha256 = "",
+    sha256 = "cba377eeb528aedf12ef1e3b46b35c40f7b7d384568fea0a19d18f3378b1ccb9",
     strip_prefix = "rules-openblas-0.1.0",
     url = "https://github.com/phpisciuneri/rules-openblas/archive/refs/tags/v0.1.0.tar.gz",
 )
