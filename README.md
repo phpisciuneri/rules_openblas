@@ -6,7 +6,7 @@ Bazel build rules for [OpenBLAS](https://www.openblas.net/).
 
 Uses [rules_foreign_cc](https://github.com/bazelbuild/rules_foreign_cc) to do a CMake configuration (default options), build, and install of OpenBLAS from source.  This allows the user to include `@openblas` in the `deps` argument in project `BUILD` files.  See the `examples` folder for a simple example.
 
-**For usage see the instructions with the [latest release](https://github.com/phpisciuneri/rules-openblas/releases/latest).**
+**For usage see the instructions with the [latest release](https://github.com/phpisciuneri/rules_openblas/releases/latest).**
 
 ## Tested
 
