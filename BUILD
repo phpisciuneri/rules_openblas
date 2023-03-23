@@ -6,7 +6,7 @@ cmake(
     out_data_dirs = ["share"],
     out_static_libs = select({
         "@bazel_tools//src/conditions:linux": ["libopenblas.a"],
-        "@bazel_tools//src/conditions:windows": ["openblas.lib"]
+        "@bazel_tools//src/conditions:windows": ["openblas.lib"],
     }),
     visibility = ["//visibility:public"],
 )

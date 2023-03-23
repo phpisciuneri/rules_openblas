@@ -11,15 +11,16 @@ Uses [rules_foreign_cc](https://github.com/bazelbuild/rules_foreign_cc) to do a 
 ## Tested
 
 - Windows 10
+- Ubuntu 20.04.5 LTS
 
 ## Troubleshooting
 
-If the CMake configuration or build encounters any errors I recommend:
+If the CMake configuration or build fails I recommend to check the `CMake.log` under `$(GENDIR)/openblas_foreign_cc` for any errors. Use `bazel info --show_make_env` if you are unsure of `GENDIR`.
 
-- Checking the `CMake.log` under `$(GENDIR)/openblas_foreign_cc` for any errors. Use `bazel info --show_make_env` if you are unsure of `GENDIR`.
-- Then, clone this repository.
-- Replace the `http_archive` function with a `local_repository` function pointing to the cloned repo in `WORKSPACE`.
+If you suspect that the errors can be resolved with cmake configuration options:
+- Clone this repository.
 - Adjust the `cmake` rule in `BUILD` with custom settings for your system.
+- Replace the `http_archive` function with a `local_repository` function pointing to the cloned repo in `WORKSPACE`.
 
 ## Future
 
