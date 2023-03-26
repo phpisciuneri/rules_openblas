@@ -12,6 +12,7 @@ Uses [rules_foreign_cc](https://github.com/bazelbuild/rules_foreign_cc) to do a 
 
 - Windows 10
 - Ubuntu 20.04.5 LTS
+- MacOS 12.6.3
 
 ## Troubleshooting
 
